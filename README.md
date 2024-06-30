@@ -2,33 +2,92 @@
 Designed Vanilla RNN, LSTM and GRU models to predict the state of charge of a lithium-ion battery used in an EV
 
 ## Dataset Description
-The dataset contains data for driving trips that have been made using a BMW i3 electric vehicle, and has been originally sourced from IEEE Dataport.
+The dataset contains data for driving trips that have been made using a BMW i3 EV. It has been originally sourced from IEEE Dataport, but published in Kaggle.
 * Title: BATTERY AND HEATING DATA IN REAL DRIVING CYCLES
 * URL: https://www.kaggle.com/datasets/atechnohazard/battery-and-heating-data-in-real-driving-cycles
-* Dataset description:
-  | Number of trips | 70  |
-  | :---------------: | :---: |
-  | Number of categories | 2 |
-  | Number of trips in category A (summer) | 32 |
-  | Number of trips in category B (winter) | 38 |
-  | Total number of samples | 10,94,793 |
-  | Number of samples in category A | 4,67,701 |
-  | Number of samples in category B | 6,27,092 |
+<table>
+<thead>
+  <tr>
+    <th align="center" colspan="2">Generic Description of Dataset</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="center">Number of trips</td>
+    <td align="center">70</td>
+  </tr>
+  <tr>
+    <td align="center">Number of categories</td>
+    <td align="center">2</td>
+  </tr>
+  <tr>
+    <td align="center">Number of trips in category A (summer)</td>
+    <td align="center">32</td>
+  </tr>
+  <tr>
+    <td align="center">Number of trips in category B (winter)</td>
+    <td align="center">38</td>
+  </tr>
+  <tr>
+    <td align="center">Total number of samples</td>
+    <td align="center">10,94,793</td>
+  </tr>
+  <tr>
+    <td align="center">Number of samples in category A</td>
+    <td align="center">4,67,701</td>
+  </tr>
+  <tr>
+    <td align="center">Number of samples in category B</td>
+    <td align="center">6,27,092</td>
+  </tr>
+</tbody>
+</table>
 
 ### Training and Test Datasets
 The training dataset has combined data from both categories, sorted in decreasing order of battery SoC.
-  | Number of trips | 35  |
-  | :---------------: | :---: |
-  | Number of trips in category A (summer) | 16 |
-  | Number of trips in category B (winter) | 19 |
-  | Total number of samples | 5,38,214 |
-  | Number of samples in training subset | 4,30,572 (80%) |
-  | Number of samples in validation subset | 1,07,642 (20%) |
-  | Input features | 3 (Battery Voltage, Battery Current,<br>Battery Temperature) |
-  | Target variable | Battery SoC |
+<table>
+  <thead>
+    <tr>
+      <th align="center" colspan="2">Generic Description of Training Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">Number of trips</td>
+      <td align="center">35</td>
+    </tr>
+    <tr>
+      <td align="center">Number of trips in category A (summer)</td>
+      <td align="center">16</td>
+    </tr>
+    <tr>
+      <td align="center">Number of trips in category B (winter)</td>
+      <td align="center">19</td>
+    </tr>
+    <tr>
+      <td align="center">Total number of samples</td>
+      <td align="center">5,38,214</td>
+    </tr>
+    <tr>
+      <td align="center">Number of samples in training subset</td>
+      <td align="center">4,30,572 (80%)</td>
+    </tr>
+    <tr>
+      <td align="center">Number of samples in validation subset</td>
+      <td align="center">1,07,642 (20%)</td>
+    </tr>
+    <tr>
+      <td align="center">Input features</td>
+      <td align="center">3 (Battery Voltage, Battery Current,<br>Battery Temperature)</td>
+    </tr>
+    <tr>
+      <td align="center">Target variable</td>
+      <td align="center">Battery SoC</td>
+    </tr>
+  </tbody>
+</table>
 
-On the other hand, the test dataset contains data for 12 unseen trips, 6 each from category A and B. <br>
-To normalize the training, validation and test datasets, min-max normalization has been used.
+On the other hand, the test dataset contains data for 12 unseen trips, 6 each from category A and B. To normalize the training, validation and test datasets, min-max normalization has been used, with a scaling range of [-1,1].
 
 ## Vanilla RNN
 The SimpleRNN and Dense layers of the Sequential module of the Keras library in Python were used to implement the Vanilla RNN.
