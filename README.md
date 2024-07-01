@@ -106,4 +106,71 @@ The LSTM and Dense layers of the Sequential module of the Keras library in Pytho
 ## GRU
 The GRU and Dense layers of the Sequential module of the Keras library in Python were used to implement the gated recurrent unit network. The activation functions, loss function, optimizer, learning rate and the performance metrics used are similar to the Vanilla RNN implementation, with the optimal configuration for the LSTM model also being determined in a similar fashion.
 
+## Model Testing/Validation
+The performance of the three optimal models was compared using the test datasets, as well as the remaining datasets that were not used for either training, validation or testing.
+* Results for the Test Datasets
+<table>
+<thead>
+  <tr>
+    <th align="center">Model</th>
+    <th align="center">Number of Parameters</th>
+    <th align="center">Overall Average MSE (in %)</th>
+    <th align="center">Overall Average R2 Score (in %)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="center">Vanilla RNN</td>
+    <td align="center">67,075</td>
+    <td align="center">0.0587</td>
+    <td align="center">99.9971</td>
+  </tr>
+  <tr>
+    <td align="center">LSTM</td>
+    <td align="center">2,67,523</td>
+    <td align="center">0.0524</td>
+    <td align="center">99.9958</td>
+  </tr>
+  <tr>
+    <td align="center">GRU</td>
+    <td align="center">2,01,475</td>
+    <td align="center">0.0136</td>
+    <td align="center">99.9992</td>
+  </tr>
+</tbody>
+</table>
+* Results for the Miscellaneous Test Datasets
+<table>
+<thead>
+  <tr>
+    <th align="center">Model</th>
+    <th align="center">Number of Parameters</th>
+    <th align="center">Overall Average MSE (in %)</th>
+    <th align="center">Overall Average R2 Score (in %)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="center">Vanilla RNN</td>
+    <td align="center">67,075</td>
+    <td align="center">0.1622</td>
+    <td align="center">99.9966</td>
+  </tr>
+  <tr>
+    <td align="center">LSTM</td>
+    <td align="center">2,67,523</td>
+    <td align="center">0.1707</td>
+    <td align="center">99.9961</td>
+  </tr>
+  <tr>
+    <td align="center">GRU</td>
+    <td align="center">2,01,475</td>
+    <td align="center">0.0418</td>
+    <td align="center">99.9991</td>
+  </tr>
+</tbody>
+</table>
+
+## Conclusion 
+The GRU model achieved the least MSE and highest R2 score among all the three and hence, it proved to be quite capable of accurately estimating the SoC of a battery operating under different conditions.
 
