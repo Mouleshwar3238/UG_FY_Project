@@ -172,6 +172,9 @@ The performance of the three optimal models was compared using the test datasets
 </tbody>
 </table>
 
+## Supplementary Results
+In addition to the above RNN models, SoC prediction was carried out using some popular ML algorithms.
+
 ## Conclusion 
 The GRU model achieved the least MSE and highest R2 score among all the three and hence, it proved to be quite capable of accurately estimating the SoC of a battery operating under different conditions.
 
