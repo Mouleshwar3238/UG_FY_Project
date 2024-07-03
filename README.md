@@ -1,5 +1,5 @@
 # UG_FY_Project - Lithium-Ion Battery SoC Prediction Using Deep Learning
-Designed Vanilla RNN, LSTM and GRU models to predict the state of charge of a lithium-ion battery used in an EV
+Designed Vanilla RNN, LSTM and GRU models to predict the state of charge of a lithium-ion battery used in an EV.
 
 ## Dataset Description
 The dataset contains data for driving trips that have been made using a BMW i3 EV. It has been originally sourced from IEEE Dataport, but published in Kaggle.
