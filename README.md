@@ -1,4 +1,4 @@
-# UG_FY_Project - Lithium-Ion Battery SoC Prediction Using Deep Learning
+# Lithium-Ion Battery SoC Prediction Using Deep Learning
 Designed Vanilla RNN, LSTM and GRU models to predict the state of charge of a lithium-ion battery used in an EV.
 
 ## Dataset Description
@@ -174,7 +174,76 @@ The performance of the three optimal models was compared using the test datasets
 
 ## Supplementary Results
 In addition to the above RNN models, SoC prediction was carried out using some popular ML algorithms.
+<table>
+<thead>
+  <tr>
+    <th align="center">Algorithm</th>
+    <th align="center">Training R2 Score <br> (in %)</th>
+    <th align="center">Validation R2 Score  <br> (in %)</th>
+    <th align="center">Test R2 Score <br> (in %)</th>
+    <th align="center">Miscellaneous Test R2 Score <br> (in %)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="center">Linear Regression</td>
+    <td align="center">82.9611</td>
+    <td align="center">82.8506</td>
+    <td align="center">93.5213</td>
+    <td align="center">81.5465</td>
+  </tr>
+  <tr>
+    <td align="center">Lasso Regression</td>
+    <td align="center">82.9510</td>
+    <td align="center">82.8430</td>
+    <td align="center">93.3572</td>
+    <td align="center">81.3621</td>
+  </tr>
+  <tr>
+    <td align="center">Ridge Regression</td>
+    <td align="center">82.9575</td>
+    <td align="center">82.8485</td>
+    <td align="center">93.4173</td>
+    <td align="center">81.4368</td>
+  </tr>
+  <tr>
+    <td align="center">Linear SVR</td>
+    <td align="center">81.9056</td>
+    <td align="center">81.8045</td>
+    <td align="center">94.5503</td>
+    <td align="center">81.9790</td>
+  </tr>
+  <tr>
+    <td align="center">Decision Tree Regressor</td>
+    <td align="center">99.9899</td>
+    <td align="center">96.5195</td>
+    <td align="center">85.4748</td>
+    <td align="center">71.3823</td>
+  </tr>
+  <tr>
+    <td align="center">AdaBoost Regressor</td>
+    <td align="center">74.1895</td>
+    <td align="center">74.2081</td>
+    <td align="center">77.1237</td>
+    <td align="center">62.9671</td>
+  </tr>
+  <tr>
+    <td align="center">MLP Regressor</td>
+    <td align="center">92.8503</td>
+    <td align="center">92.8617</td>
+    <td align="center">94.7645</td>
+    <td align="center">81.1827</td>
+  </tr>
+  <tr>
+    <td align="center">KNN Regressor</td>
+    <td align="center">98.7241</td>
+    <td align="center">98.0180</td>
+    <td align="center">84.5711</td>
+    <td align="center">72.0587</td>
+  </tr>
+</tbody>
+</table>
 
 ## Conclusion 
-The GRU model achieved the least MSE and highest R2 score among all the three and hence, it proved to be quite capable of accurately estimating the SoC of a battery operating under different conditions.
+The GRU model achieved the least MSE and highest R2 score than that of the other models and hence, it proved to be quite capable of accurately estimating the SoC of a battery operating under different conditions.
 
