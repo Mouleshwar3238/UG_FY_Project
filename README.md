@@ -236,13 +236,15 @@ In addition to the above RNN models, SoC prediction was carried out using some p
   </tr>
   <tr>
     <td align="center">KNN Regressor</td>
-    <td align="center">98.7241</td>
-    <td align="center">98.0180</td>
-    <td align="center">84.5711</td>
-    <td align="center">72.0587</td>
+    <td align="center">98.7171</td>
+    <td align="center">98.0798</td>
+    <td align="center">84.5740</td>
+    <td align="center">72.0371</td>
   </tr>
 </tbody>
 </table>
+
+For the KNN Regressor, the best value of K was found by plotting the elbow curve for R2 scores versus different values of K.
 
 ## Conclusion 
 The GRU model achieved the least MSE and highest R2 score than that of the other models and hence, it proved to be quite capable of accurately estimating the SoC of a battery operating under different conditions.
