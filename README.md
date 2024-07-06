@@ -241,6 +241,13 @@ In addition to the above RNN models, SoC prediction was carried out using some p
     <td align="center">84.5740</td>
     <td align="center">72.0371</td>
   </tr>
+  <tr>
+    <td align="center">XGBoost Regressor</td>
+    <td align="center">96.8006</td>
+    <td align="center">96.7200</td>
+    <td align="center">90.1492</td>
+    <td align="center">77.4607</td>
+  </tr>
 </tbody>
 </table>
 
