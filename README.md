@@ -248,6 +248,20 @@ In addition to the above RNN models, SoC prediction was carried out using some p
     <td align="center">90.1492</td>
     <td align="center">77.4607</td>
   </tr>
+  <tr>
+    <td align="center">Random Forest Regressor</td>
+    <td align="center">99.7114</td>
+    <td align="center">97.9454</td>
+    <td align="center">89.2077</td>
+    <td align="center">75.8618</td>
+  </tr>
+  <tr>
+    <td align="center">Gradient Boosting Regressor</td>
+    <td align="center">93.5534</td>
+    <td align="center">93.4392</td>
+    <td align="center">93.2566</td>
+    <td align="center">79.7241</td>
+  </tr>
 </tbody>
 </table>
 
